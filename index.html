@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <div
+      class="containerdados"
+      style="
+        background: #dbe2e6;
+        padding: 37px;
+        margin: 5px;
+        border: 4px black solid;
+        text-align: center;
+      "
+    >
+      <div>
+        <p>Aqui temos o demonstrativo da idade mais rapidamente:</p>
+        <br />
+      </div>
+
+      <div>
+        <label for="nascimento">Ano de Nascimento:</label>
+        <input
+          type="nascimento"
+          id="nascimento"
+          name="nascimento"
+        /><br /><br />
+      </div>
+
+      <div>
+        <label for="atual">Ano Atual</label>
+        <input type="atual" id="atual" name="atual" /><br /><br />
+      </div>
+
+      <div>
+        <label for="resultado">Idade</label>
+        <input type="resultado" id="resultado" name="resultado" /><br /><br />
+      </div>
+
+      <div>
+        <button type="button" onclick="calcularimg()">Calcular</button>
+      </div>
+    </div>
+
+    <script>
+      function calcularimg() {
+        var nascimento = document.getElementById('nascimento').value;
+        var atual = document.getElementById('atual').value;
+        var resultadosubtracao = atual - nascimento;
+
+        document.getElementById('resultado').value =
+          resultadosubtracao + '  - Esta é a sua idade!';
+      }
+    </script>
+  </body>
+</html>
